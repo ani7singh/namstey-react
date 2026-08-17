@@ -1,3 +1,60 @@
-#heading{
-  color: red;
+.header{
+  display: flex;
+  justify-content: space-between; /* Pushes logo to left, nav items to right */
+  align-items: center;            /* Centers logo and nav items vertically */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+.logo-container img{
+  width: 100px;/* Adjust width as needed */
+  height: auto;
+  display: block;
+}
+/* Navigation List Container */
+.nav-items > ul {
+  display: flex;       /* Aligns list items (li) in a horizontal row */
+  list-style: none;    /* Removes default bullet points */
+  margin: 0;
+  padding: 0;
+  gap: 24px;          /* Adds equal space between menu items */
+}
+/* Individual Navigation Links */
+.nav-items li {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.nav-items li:hover {
+  color: #ff6b6b; /* Accent color on hover */
+}
+/* 1. Base Card Container */
+.res-card {
+  width: 300px;                    /* Set a fixed width or max-width */
+  background-color: #ffffff;         /* Card background */
+  border-radius: 12px;               /* Rounded corners */
+  overflow: hidden;                  /* Keeps image corners rounded at top */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: sans-serif;           /* Clean typography */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+.res-card:hover {
+  transform: translateY(-5px);       /* Lift card up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Deepen shadow on hover */
+}
+
+/* 3. Image Styling */
+.res-card img {
+  width: 100%;                       /* Fill card width */
+  height: 180px;                     /* Set fixed height */
+  object-fit: cover;                 /* Crop image nicely without distortion */
+  display: block;
+}
+.res-info{
+   padding: 10px; 
+  font-size: 1.25rem;
+}
+
+.res-container .search{
+  padding: 10px;
 }
