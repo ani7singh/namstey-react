@@ -5,6 +5,16 @@
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;                 /* Adds equal space between cards vertically & horizontally */
+  justify-content: center;   /* Centers the row horizontally */
+  padding: 20px;
+}
+.res-container .search{
+  padding: 10px;
+}
 .logo-container img{
   width: 100px;/* Adjust width as needed */
   height: auto;
@@ -51,10 +61,6 @@
   display: block;
 }
 .res-info{
-   padding: 10px; 
+  padding: 10px; 
   font-size: 1.25rem;
-}
-
-.res-container .search{
-  padding: 10px;
 }

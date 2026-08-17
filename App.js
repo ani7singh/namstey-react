@@ -58,6 +58,10 @@ import { createRoot } from "react-dom/client";
         <div className="res-container">
             <div className="search">Search</div>
             <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
         </div>
     )
     const AppComponent = () => (
