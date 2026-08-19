@@ -64,3 +64,10 @@
   padding: 10px; 
   font-size: 1.25rem;
 }
+.res-details span{
+  padding: 0 5px;
+}
+.filter-btn{
+  margin: 10px;
+  cursor: pointer;
+}

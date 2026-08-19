@@ -1,22 +1,3 @@
-import React from "react";
-import { createRoot } from "react-dom/client"; 
-
-/**
- * Header
- *  -Logo
- *  -Nav Items
- * Body
- *  -Search
- *  -Restaurant Container
- *   -Restaurant Card
- *    -Img
- *    -Name of Restaurant,Rating,cuisne
- * Footer
- *  -Copyright
- *  -Links
- *  -Address
- *  -Contact
- */
 const restaurantsList = [{
                     "info": {
                       "id": "9871",
@@ -470,70 +451,5 @@ const restaurantsList = [{
                       "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
                     }
                   }];
-    const Header = () => {
-       return (
-        <div className="header">
-            <div className="logo-container">
-                <img src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>ContactUs</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-    };
-    const RestaurantCard = (props) => {
-        {console.log(props)}
-        const {resData} = props;
-        const {name,cuisines,avgRating,costForTwo} = resData?.info;
-        return ( <div className="res-card">
-            <div className="res-logo-container">
-                <img
-                className="res-logo"
-                alt="res-logo"
-                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1600,h_640,c_fill/"+ resData.info.cloudinaryImageId}
-                />
-            </div>
-            <div className="res-info">
-                <h3 className="res-name">{name}</h3>
-                <h4 className="res-cuisines">{cuisines.join(", ")}</h4>
-                <div className="res-details">
-                    <span className="res-rating">
-                        {avgRating}
-                    </span>
-                    <span className="res-cost">{costForTwo}</span>
-                </div>
-            </div>
-        </div>
-        );
-    };
 
-    //not using keys (not acceptable) <<< index as key <<<<< unique id (best practice)
-    const Body = () =>{
-        return (
-            <div className="res-container">
-                <div className="search">Search</div>
-                {
-                  // .map((restaurant,index) so using index for keys its not recommended
-                    // console.log(restaurantsList.map((restaurant) => console.log(restaurant)))
-                    restaurantsList.map((restaurant) => <RestaurantCard  key={restaurant.info.id} resData={restaurant} />)
-                }
-                
-            </div>
-        );
-    };
-    const AppComponent = () =>{
-        return  (
-            <div className="app">
-                <Header />
-                <Body/>
-            </div>
-        );
-    }; 
-    const root = createRoot(document.getElementById("root"));
-    root.render(<AppComponent />);
+export default restaurantsList;
