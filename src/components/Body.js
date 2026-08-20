@@ -23,13 +23,7 @@ const Body = () =>{
         console.error("Failed to fetch Swiggy API:", error);
         }
     }
-    //cconditional rendering
-    // if (!listOfRestaurants || listOfRestaurants.length === 0) {
-    //     return <h1>loading.............</h1>;
-    // }
-    // if (!listOfRestaurants || listOfRestaurants.length === 0) {
-    //     return <Shimmer />;
-    // }
+    //conditional rendering
     return (!listOfRestaurants || listOfRestaurants.length === 0 ) ? (
         <Shimmer />
     ) : 
