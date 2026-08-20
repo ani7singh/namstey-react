@@ -67,6 +67,12 @@
 .res-details span{
   padding: 0 5px;
 }
+.filter{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 450px;
+}
 .filter-btn{
   margin: 10px;
   cursor: pointer;
